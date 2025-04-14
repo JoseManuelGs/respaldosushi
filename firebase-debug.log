@@ -1,0 +1,106 @@
+[debug] [2025-04-14T21:51:57.098Z] ----------------------------------------------------------------------
+[debug] [2025-04-14T21:51:57.101Z] Command:       /nix/store/ixbb20farqh1f4fqbmsn6b1ixn8mc8ij-nodejs-20.18.1/bin/node /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only hosting
+[debug] [2025-04-14T21:51:57.101Z] CLI Version:   14.0.1
+[debug] [2025-04-14T21:51:57.102Z] Platform:      linux
+[debug] [2025-04-14T21:51:57.102Z] Node Version:  v20.18.1
+[debug] [2025-04-14T21:51:57.102Z] Time:          Mon Apr 14 2025 21:51:57 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-04-14T21:51:57.102Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-14T21:51:57.570Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-14T21:51:57.570Z] > authorizing via signed-in user (joseguerrerosimental@gmail.com)
+[debug] [2025-04-14T21:51:57.571Z] [iam] checking project ryu-sushi-e0d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-04-14T21:51:57.572Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:51:57.572Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:51:57.574Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions [none]
+[debug] [2025-04-14T21:51:57.574Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions x-goog-quota-user=projects/ryu-sushi-e0d14
+[debug] [2025-04-14T21:51:57.574Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-14T21:51:57.778Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions 200
+[debug] [2025-04-14T21:51:57.779Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-14T21:51:57.780Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:51:57.780Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:51:57.781Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ryu-sushi-e0d14 [none]
+[debug] [2025-04-14T21:51:58.083Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ryu-sushi-e0d14 200
+[debug] [2025-04-14T21:51:58.083Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ryu-sushi-e0d14 {"projectId":"ryu-sushi-e0d14","projectNumber":"183891321700","displayName":"Ryu Sushi","name":"projects/ryu-sushi-e0d14","resources":{"hostingSite":"ryu-sushi-e0d14"},"state":"ACTIVE","etag":"1_713e1577-5a8d-4f1c-a312-165b38010e9a"}
+[info] 
+   Thank you for trying our early preview of Angular support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Angular version 16 - 19. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/angular
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-04-14T21:51:58.349Z] Error: Cannot find module '@angular-devkit/core/node'
+Require stack:
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/utils.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/index.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/emulator/controller.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/commands/database-get.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/commands/index.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/index.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/bin/firebase.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.resolve (node:internal/modules/helpers:190:19)
+    at relativeRequire (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/utils.js:197:34)
+    at getAllTargets (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/angular/utils.js:82:37)
+    at getValidBuildTargets (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/angular/index.js:117:56)
+    at async prepareFrameworks (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/index.js:200:35)
+    at async deploy (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/deploy/index.js:76:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-04-14T21:52:32.866Z] ----------------------------------------------------------------------
+[debug] [2025-04-14T21:52:32.869Z] Command:       /nix/store/ixbb20farqh1f4fqbmsn6b1ixn8mc8ij-nodejs-20.18.1/bin/node /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only hosting
+[debug] [2025-04-14T21:52:32.869Z] CLI Version:   14.0.1
+[debug] [2025-04-14T21:52:32.869Z] Platform:      linux
+[debug] [2025-04-14T21:52:32.869Z] Node Version:  v20.18.1
+[debug] [2025-04-14T21:52:32.870Z] Time:          Mon Apr 14 2025 21:52:32 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-04-14T21:52:32.870Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-14T21:52:33.325Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-14T21:52:33.325Z] > authorizing via signed-in user (joseguerrerosimental@gmail.com)
+[debug] [2025-04-14T21:52:33.326Z] [iam] checking project ryu-sushi-e0d14 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-04-14T21:52:33.327Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:52:33.327Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:52:33.329Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions [none]
+[debug] [2025-04-14T21:52:33.329Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions x-goog-quota-user=projects/ryu-sushi-e0d14
+[debug] [2025-04-14T21:52:33.329Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-14T21:52:33.502Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions 200
+[debug] [2025-04-14T21:52:33.503Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ryu-sushi-e0d14:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-14T21:52:33.504Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:52:33.504Z] Checked if tokens are valid: true, expires at: 1744670894826
+[debug] [2025-04-14T21:52:33.505Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ryu-sushi-e0d14 [none]
+[debug] [2025-04-14T21:52:33.845Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ryu-sushi-e0d14 200
+[debug] [2025-04-14T21:52:33.846Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ryu-sushi-e0d14 {"projectId":"ryu-sushi-e0d14","projectNumber":"183891321700","displayName":"Ryu Sushi","name":"projects/ryu-sushi-e0d14","resources":{"hostingSite":"ryu-sushi-e0d14"},"state":"ACTIVE","etag":"1_713e1577-5a8d-4f1c-a312-165b38010e9a"}
+[info] 
+   Thank you for trying our early preview of Angular support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Angular version 16 - 19. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/angular
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-04-14T21:52:34.109Z] Error: Cannot find module '@angular-devkit/core/node'
+Require stack:
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/utils.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/index.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/emulator/controller.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/commands/database-get.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/commands/index.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/index.js
+- /nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/bin/firebase.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.resolve (node:internal/modules/helpers:190:19)
+    at relativeRequire (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/utils.js:197:34)
+    at getAllTargets (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/angular/utils.js:82:37)
+    at getValidBuildTargets (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/angular/index.js:117:56)
+    at async prepareFrameworks (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/frameworks/index.js:200:35)
+    at async deploy (/nix/store/b9a1wqzb1vkh5xd2mrp196csvbgv8j13-firebase-tools-14.0.1/lib/node_modules/firebase-tools/lib/deploy/index.js:76:9)
+[error] 
+[error] Error: An unexpected error has occurred.

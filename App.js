@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Print from 'expo-print';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import SushiScreen from './screens/SushiScreen';
@@ -16,13 +18,16 @@ import ClientSelectionModal from './screens/ClientSelectionModal';
 import SavedDaysModal from './screens/SavedDaysModal';
 import PostresScreen from './screens/PostresScreen';
 import InventarioScreen from './screens/InventarioScreen';
+import LoginScreen from './screens/LoginScreen';
 import ExpenseScreen from './ExpenseScreen';
+import { auth } from './screens/firebaseConfig';
+import { onAuthStateChanged } from "firebase/auth";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { 
   TouchableOpacity, 
   Image, 
-  View, 
-  Modal, 
+  Modal,
+   
   Text, 
   StyleSheet, 
   ScrollView, 
@@ -666,13 +671,38 @@ function MainApp() {
   );
 }
 
-export default function App() {
+const App = () => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
   return (
     <NavigationContainer>
-      <MainApp />
+      {user ? (
+        <MainApp />
+      ) : (
+        <LoginScreen onLoginSuccess={() => setUser(auth.currentUser)} />
+      )}
     </NavigationContainer>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   promoButton: {
@@ -786,3 +816,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
