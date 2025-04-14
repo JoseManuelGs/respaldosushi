@@ -55,7 +55,7 @@ const ExpenseScreen = ({ isDarkMode, expenses, onUpdateExpenses, navigation }) =
     return () => {
       subscription?.remove();
     };
-  }, []);
+  }, [onUpdateExpenses]);
 
   // Función para actualizar y guardar en caché
   const handleUpdateExpenses = async (updatedExpenses) => {
@@ -901,13 +901,6 @@ const styles = StyleSheet.create({
   },
   darkModalContent: {
     backgroundColor: '#2c2c2e',
-  },
-  modalHeaderContainer: {
-    marginBottom: 20,
-    paddingBottom: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
-    alignItems: 'center',
   },
   modalTitle: {
     fontSize: 22,

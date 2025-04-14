@@ -23,17 +23,15 @@ import ExpenseScreen from './ExpenseScreen';
 import { auth } from './screens/firebaseConfig';
 import { onAuthStateChanged } from "firebase/auth";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { 
-  TouchableOpacity, 
-  Image, 
+import {
+  TouchableOpacity,
+  Image,
   Modal,
-   
-  Text, 
-  StyleSheet, 
-  ScrollView, 
-  Alert, 
+  StyleSheet,
+  ScrollView,
+  Alert,
   Platform,
-  TextInput 
+  TextInput
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
